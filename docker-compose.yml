@@ -1,0 +1,14 @@
+version: '3'
+services:
+  keyclock_service:
+    build: 
+      context: keyclock
+    container_name: keyclock_service
+    hostname: keyclock
+    ports: 
+      - "8000:8080"
+      - "9090:9090"
+    networks:
+      - keyclock-network
+networks:
+  keyclock-network:
